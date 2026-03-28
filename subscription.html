@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-tint": "#006d30", "on-surface-variant": "#3f493f", "on-surface": "#0d1c2e", "on-primary-fixed": "#00210a", "inverse-surface": "#233144", "on-tertiary-fixed-variant": "#653e00", "on-tertiary-fixed": "#2a1700", "surface-container-low": "#eff4ff", secondary: "#0061a5", "on-secondary-fixed": "#001c37", "inverse-on-surface": "#eaf1ff", "secondary-container": "#0397fd", "on-error": "#ffffff", "on-secondary-fixed-variant": "#00497e", "surface-dim": "#ccdbf3", "on-primary-container": "#d3ffd5", "on-primary-fixed-variant": "#005323", "on-tertiary": "#ffffff", "secondary-fixed-dim": "#9fcaff", "secondary-fixed": "#d2e4ff", outline: "#6f7a6e", "surface-container-lowest": "#ffffff", "primary-fixed": "#95f8a7", "outline-variant": "#becabc", "surface-container": "#e6eeff", surface: "#f8f9ff", primary: "#00652c", error: "#ba1a1a", "on-secondary": "#ffffff", "tertiary-fixed": "#ffddb8", tertiary: "#7b4d00", "surface-container-highest": "#d5e3fc", "tertiary-container": "#9c6300", "on-primary": "#ffffff", "primary-container": "#15803d", "primary-fixed-dim": "#79db8d", "surface-container-high": "#dce9ff", "surface-variant": "#d5e3fc", background: "#f8f9ff", "on-secondary-container": "#002d52", "tertiary-fixed-dim": "#ffb95f", "error-container": "#ffdad6", "inverse-primary": "#79db8d", "on-background": "#0d1c2e", "surface-bright": "#f8f9ff", "on-tertiary-container": "#fff2e7", "on-error-container": "#93000a"}, fontFamily: {headline: ["Manrope"], body: ["Inter"], label: ["Inter"], display: "Manrope"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-border {
+            outline: 1px solid rgba(191, 202, 186, 0.2);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #206223 0%, #3a7b3a 100%);
+        }
+        .subtle-shadow {
+            box-shadow: 0px 12px 32px rgba(25, 28, 28, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed">
+<!-- Top Navigation -->
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto z-50 rounded-2xl mt-4 mx-4 w-[calc(100%-2rem)] sticky top-4 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(25,28,28,0.04)] glass-border">
+<div class="text-2xl font-extrabold tracking-tighter text-green-800 dark:text-green-200 font-headline">
+        Verdrop
+    </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-stone-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300" href="dashboard.html">Dashboard</a>
+<a class="text-stone-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300" href="about-us.html">About Us</a>
+<a class="text-green-700 dark:text-green-400 font-bold border-b-2 border-green-600 pb-1 font-body transition-all duration-300" href="subscription.html">Subscription</a>
+<a class="text-stone-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300" href="products.html">Products</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant scale-95 active:scale-90 transition-transform" data-icon="account_circle">account_circle</button>
+<a href="auth.html" class="hidden md:block px-6 py-2.5 rounded-xl primary-gradient text-white font-bold text-sm tracking-tight scale-95 active:scale-90 transition-transform shadow-lg">Get Started</a>
+</div>
+</nav>
+<main class="pt-24 pb-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Header Section -->
+<header class="text-center mb-16 max-w-3xl mx-auto">
+<span class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wider uppercase text-primary bg-primary-fixed/30 rounded-full">Pricing Plans</span>
+<h1 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface mb-6 leading-tight">
+            Scale your harvest with <span class="text-primary">precision</span>.
+        </h1>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+            Choose the stewardship level that fits your land. From single smart pots to expansive agricultural estates, Verdrop manages every drop.
+        </p>
+</header>
+<!-- Pricing Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Basic Plan -->
+<div class="bg-surface-container-lowest p-8 rounded-xl subtle-shadow flex flex-col h-full transition-transform hover:-translate-y-1">
+<div class="mb-8">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2">Basic</h3>
+<div class="flex items-baseline gap-1 mb-4">
+<span class="text-4xl font-extrabold font-headline">Free</span>
+</div>
+<p class="text-on-surface-variant text-sm">Perfect for hobbyists starting their sustainable journey.</p>
+</div>
+<div class="flex-grow space-y-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">1 IoT Device support</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Real-time soil monitoring</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Basic mobile app alerts</span>
+</div>
+<div class="flex items-center gap-3 opacity-40">
+<span class="material-symbols-outlined" data-icon="block">block</span>
+<span class="text-on-surface-variant">No AI Predictions</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface font-headline font-bold rounded-xl hover:bg-surface-container-high transition-colors active:scale-95">
+                Choose Plan
+            </button>
+</div>
+<!-- Pro Plan (Most Popular) -->
+<div class="relative bg-surface-container-lowest p-8 rounded-xl subtle-shadow flex flex-col h-full border-2 border-primary-container scale-105 z-10 shadow-xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-xs font-bold tracking-widest uppercase rounded-full">
+                Most Popular
+            </div>
+<div class="mb-8">
+<div class="flex justify-between items-start">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2">Pro</h3>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="flex items-baseline gap-1 mb-4">
+<span class="text-4xl font-extrabold font-headline">$19</span>
+<span class="text-on-surface-variant font-medium">/mo</span>
+</div>
+<p class="text-on-surface-variant text-sm font-medium">Advanced stewardship for serious cultivators.</p>
+</div>
+<div class="flex-grow space-y-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface font-semibold">Up to 10 devices</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface font-semibold">AI watering predictions</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Weather integration sync</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Historical soil health reports</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-on-surface">Multi-user access</span>
+</div>
+</div>
+<button class="w-full py-4 primary-gradient text-white font-headline font-bold rounded-xl shadow-lg shadow-primary/20 active:scale-95 transition-all">
+                Choose Plan
+            </button>
+</div>
+<!-- Enterprise Plan -->
+<div class="bg-surface-container-lowest p-8 rounded-xl subtle-shadow flex flex-col h-full transition-transform hover:-translate-y-1">
+<div class="mb-8">
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2">Enterprise</h3>
+<div class="flex items-baseline gap-1 mb-4">
+<span class="text-4xl font-extrabold font-headline">$89</span>
+<span class="text-on-surface-variant font-medium">/mo</span>
+</div>
+<p class="text-on-surface-variant text-sm">Industrial scale management and deep technical control.</p>
+</div>
+<div class="flex-grow space-y-4 mb-10">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Unlimited devices</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Full API access</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant font-semibold text-primary">Custom soil calibration</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Dedicated account manager</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Early access to new sensors</span>
+</div>
+</div>
+<button class="w-full py-4 bg-surface-container-highest text-on-surface font-headline font-bold rounded-xl hover:bg-surface-container-high transition-colors active:scale-95">
+                Choose Plan
+            </button>
+</div>
+</div>
+<!-- Comparison Visual Section (Bento Style) -->
+<section class="mt-32">
+<h2 class="font-headline text-3xl font-bold text-center mb-12">Why Upgrade?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- AI Feature Card -->
+<div class="md:col-span-2 bg-surface-container rounded-xl overflow-hidden flex flex-col md:flex-row items-stretch">
+<div class="p-8 flex-1">
+<div class="flex items-center gap-2 text-primary mb-4">
+<span class="material-symbols-outlined" data-icon="neurology">neurology</span>
+<span class="font-bold uppercase tracking-widest text-xs">AI Predictions</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">Watering that thinks for itself.</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Our neural networks analyze local humidity, soil texture, and plant species to predict water needs up to 72 hours in advance. Save 40% more water compared to manual scheduling.</p>
+<div class="w-full bg-surface-container-high rounded-full h-2 mt-4 overflow-hidden">
+<div class="bg-primary h-full w-4/5"></div>
+</div>
+<span class="text-[10px] text-on-surface-variant mt-2 inline-block">Pro Plan Efficiency Rating</span>
+</div>
+<div class="flex-1 min-h-[240px] relative">
+<img alt="high tech microchips integrated into soil sensors" class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up of a high-tech agricultural sensor module with glowing green indicators placed in rich dark soil at dawn" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz589XYE-6R58cJLZWHkrxbVw_u63aOJ_Uou8mwPfald9EyTv-dl2MC88v7C4kn2dlsGqvH1EKdC6tomhjJYTHq24GCW5TjLvvIv39vowk0xipey5UViiCzjU5-mML1IP1ZAXPnKfyUG08VH0KYxb3D1mFP3CP2YwPCgvdK3SaB44psqOpyiqpBcFs5SWQfilbnNOoa6K_oZhPNI3slP0bPtIFcRwpIh6cl12_EJCqcovRIcF0P9nggzN7BudEXyW75tvPpRLb-uwD"/>
+</div>
+</div>
+<!-- API Card -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 text-secondary mb-4">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+<span class="font-bold uppercase tracking-widest text-xs">Enterprise API</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-4">Limitless integration.</h4>
+<p class="text-on-surface-variant text-sm">Connect Verdrop to your existing farmhouse management software or custom industrial dashboards with our robust REST API.</p>
+</div>
+<div class="mt-8 font-mono text-xs bg-on-surface text-surface-container-lowest p-4 rounded-lg overflow-hidden">
+<code>GET /v1/sensors/soil_health</code>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mt-32 max-w-4xl mx-auto">
+<h2 class="font-headline text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+<div class="space-y-6">
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h5 class="font-bold mb-2">Can I switch plans later?</h5>
+<p class="text-on-surface-variant text-sm">Yes, you can upgrade or downgrade your plan at any time. Changes are reflected instantly in your dashboard.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h5 class="font-bold mb-2">What qualifies as a "device"?</h5>
+<p class="text-on-surface-variant text-sm">Any Verdrop sensor, node, or automated valve controller connected to your account counts as one device.</p>
+</div>
+<div class="p-6 bg-surface-container-low rounded-xl">
+<h5 class="font-bold mb-2">Do you offer educational discounts?</h5>
+<p class="text-on-surface-variant text-sm">We provide special Enterprise pricing for research institutions and community gardens. Contact support for details.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 bg-stone-100">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div>
+<div class="font-headline font-bold text-lg text-green-900 mb-4">Verdrop</div>
+<p class="font-body text-sm text-stone-600 max-w-xs leading-relaxed">
+                Technological Stewardship for a Greener Planet. Join thousands of growers optimizing their life-sustaining resources.
+            </p>
+</div>
+<div class="flex flex-col md:items-end justify-between">
+<div class="flex gap-6 mb-8">
+<a class="text-stone-500 hover:text-green-600 hover:underline transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-stone-500 hover:text-green-600 hover:underline transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-stone-500 hover:text-green-600 hover:underline transition-colors text-sm" href="#">Contact Support</a>
+<a class="text-stone-500 hover:text-green-600 hover:underline transition-colors text-sm" href="#">Global Sustainability</a>
+</div>
+<p class="font-body text-xs text-stone-600">
+                © 2024 Verdrop Smart Irrigation. Technological Stewardship for a Greener Planet.
+            </p>
+</div>
+</div>
+</footer>
+</body></html>

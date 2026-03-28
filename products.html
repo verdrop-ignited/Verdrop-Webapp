@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verdrop | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"surface-container-highest": "#d5e3fc", "on-primary-container": "#d3ffd5", "primary-container": "#15803d", "surface-container-high": "#dce9ff", "on-error": "#ffffff", "surface-tint": "#006d30", "tertiary-fixed": "#ffddb8", "inverse-surface": "#233144", "on-surface-variant": "#3f493f", primary: "#00652c", error: "#ba1a1a", "inverse-on-surface": "#eaf1ff", "on-secondary": "#ffffff", secondary: "#0061a5", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "on-tertiary-fixed-variant": "#653e00", "outline-variant": "#becabc", "primary-fixed": "#95f8a7", "secondary-fixed-dim": "#9fcaff", tertiary: "#7b4d00", "on-surface": "#0d1c2e", "on-secondary-fixed": "#001c37", "on-primary-fixed-variant": "#005323", outline: "#6f7a6e", "on-secondary-container": "#002d52", "on-primary-fixed": "#00210a", background: "#f8f9ff", "on-tertiary-container": "#fff2e7", surface: "#f8f9ff", "surface-container": "#e6eeff", "error-container": "#ffdad6", "on-error-container": "#93000a", "on-background": "#0d1c2e", "surface-bright": "#f8f9ff", "surface-container-low": "#eff4ff", "on-secondary-fixed-variant": "#00497e", "on-tertiary": "#ffffff", "primary-fixed-dim": "#79db8d", "on-tertiary-fixed": "#2a1700", "secondary-container": "#0397fd", "inverse-primary": "#79db8d", "tertiary-container": "#9c6300", "secondary-fixed": "#d2e4ff", "surface-variant": "#d5e3fc", "surface-dim": "#ccdbf3", "tertiary-fixed-dim": "#ffb95f"}, fontFamily: {headline: ["Manrope"], body: ["Inter"], label: ["Inter"], display: "Manrope"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f9f9f8;
+        color: #191c1c;
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-border {
+        outline: 1px solid rgba(191, 202, 186, 0.2);
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #206223 0%, #3a7b3a 100%);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #bfcaba;
+        border-radius: 10px;
+      }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- Top Navigation Bar (Glassmorphism Style) -->
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto z-50 rounded-2xl mt-4 mx-4 w-[calc(100%-2rem)] sticky top-4 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(25,28,28,0.04)] glass-border">
+<div class="text-2xl font-extrabold tracking-tighter text-green-800 dark:text-green-200 font-headline">
+    Verdrop
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-green-700 dark:text-green-400 font-bold border-b-2 border-green-600 pb-1 font-body transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="dashboard.html">Dashboard</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="about-us.html">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="subscription.html">Subscription</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="products.html">Products</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="notifications">notifications</span>
+<span class="absolute -top-1 -right-1 flex h-4 w-4">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-error opacity-75"></span>
+<span class="relative inline-flex rounded-full h-4 w-4 bg-error text-[10px] text-white items-center justify-center font-bold">2</span>
+</span>
+</div>
+<div class="active:scale-95 transition-transform cursor-pointer">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" data-icon="account_circle">account_circle</span>
+</div>
+</div>
+</nav>
+<main class="pt-12 pb-12 px-6 max-w-7xl mx-auto space-y-8">
+<!-- Header & Top Metrics -->
+<header class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="text-4xl font-black font-headline tracking-tight text-primary leading-tight">Field Overview</h1>
+<p class="text-on-surface-variant font-body mt-1">Stewardship report for Sector 7G — North Orchard.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-surface-container-low px-6 py-3 rounded-xl flex flex-col items-center">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Next Watering</span>
+<span class="text-xl font-headline font-bold text-primary">Today, 18:30</span>
+</div>
+<div class="bg-surface-container-low px-6 py-3 rounded-xl flex flex-col items-center">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Water Needed</span>
+<span class="text-xl font-headline font-bold text-secondary">450 Liters</span>
+</div>
+</div>
+</header>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Hero Status Card (Large) -->
+<section class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden group shadow-sm border-0">
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div>
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Soil Status: Healthy</span>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Moisture: Optimal</span>
+</div>
+<h2 class="text-3xl font-headline font-extrabold max-w-md">Your ecosystem is thriving under current stewardship.</h2>
+</div>
+<div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="space-y-1">
+<span class="text-label text-xs text-on-surface-variant font-bold uppercase">Nitrogen</span>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[75%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="text-label text-xs text-on-surface-variant font-bold uppercase">Phosphorus</span>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[62%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="text-label text-xs text-on-surface-variant font-bold uppercase">Potassium</span>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[88%] rounded-full"></div>
+</div>
+</div>
+<div class="space-y-1">
+<span class="text-label text-xs text-on-surface-variant font-bold uppercase">pH Level</span>
+<div class="h-1.5 w-full bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[55%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Abstract Texture Background -->
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none bg-cover bg-center" data-alt="microscopic view of healthy organic soil textures with deep rich brown and black tones" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABurl26g7dDPJ6jC-rnKZ1a_bd4jQHDAh_wljfgPtbfm4Qzb4rjOkWefgf_j88CLx7bSnyPDslH8n3h-SkySfB5Yovo0alPyWtRFWFbyi1oa_iHgkTl6D0IdYp2Ll-PGTHbiZ41qQmuOEHfODDRwwdWkczvdehVOpmtTAiVIFOyMITnqpsIThrPGFf0-0phgxly7YBlcTm9SjLGL-6gUHDvLQLhvFIGtVtV5fdgEVKVgQxqsjEiEvikgrliH3r6ceyspM1ucEPX3V8')"></div>
+</section>
+<!-- Subscription Tracking Card -->
+<section class="md:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col justify-between">
+<div>
+<h3 class="text-lg font-headline font-bold mb-6">Subscription Tracking</h3>
+<div class="relative w-32 h-32 mx-auto mb-6">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="109.3" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center rotate-90">
+<span class="text-2xl font-black text-on-surface leading-none">242</span>
+<span class="text-[10px] text-on-surface-variant uppercase font-bold">Cycles Left</span>
+</div>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant font-medium">Cycles Used</span>
+<span class="font-bold">58</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant font-medium">Billing Period</span>
+<span class="font-bold">12 Days Left</span>
+</div>
+<a href="subscription.html" class="w-full mt-2 bg-surface-container-highest text-on-surface py-2 rounded-xl text-sm font-bold active:scale-95 transition-transform block text-center">Manage Plan</a>
+</div>
+</section>
+<!-- Plant Health Monitoring (Asymmetric Card) -->
+<section class="md:col-span-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="md:col-span-1 bg-surface-container-high p-8 rounded-xl flex flex-col items-start justify-center">
+<h3 class="text-3xl font-headline font-black text-on-surface leading-tight">Plant Health Status</h3>
+<p class="text-sm text-on-surface-variant mt-4">Real-time analysis of biological signatures across 42 sensor nodes.</p>
+</div>
+<div class="md:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Status Item: Healthy -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="energy_savings_leaf" data-weight="fill">energy_savings_leaf</span>
+</div>
+<span class="text-2xl font-headline font-black text-on-surface">32</span>
+<span class="text-sm font-bold text-primary uppercase">Healthy</span>
+</div>
+<!-- Status Item: Blooming -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary-fixed rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary" data-icon="local_florist" data-weight="fill">local_florist</span>
+</div>
+<span class="text-2xl font-headline font-black text-on-surface">8</span>
+<span class="text-sm font-bold text-secondary uppercase">Blooming</span>
+</div>
+<!-- Status Item: Defected -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-error-container rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-error" data-icon="report_problem" data-weight="fill">report_problem</span>
+</div>
+<span class="text-2xl font-headline font-black text-on-surface">2</span>
+<span class="text-sm font-bold text-error uppercase">Defected</span>
+</div>
+<!-- Status Item: Dying -->
+<div class="bg-surface-container-lowest p-6 rounded-xl flex flex-col items-center text-center opacity-50">
+<div class="w-12 h-12 bg-surface-container-highest rounded-full flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="eco">eco</span>
+</div>
+<span class="text-2xl font-headline font-black text-on-surface">0</span>
+<span class="text-sm font-bold text-on-surface-variant uppercase">About to Die</span>
+</div>
+</div>
+</section>
+<!-- Soil Moisture Trends (Interactive Chart Simulation) -->
+<section class="md:col-span-8 bg-surface-container-lowest rounded-xl p-8">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-headline font-extrabold">Soil Moisture Trends</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-xs font-bold rounded-full bg-surface-container-high">24H</button>
+<button class="px-3 py-1 text-xs font-bold rounded-full bg-primary text-white">7D</button>
+<button class="px-3 py-1 text-xs font-bold rounded-full bg-surface-container-high">1M</button>
+</div>
+</div>
+<div class="relative h-64 w-full">
+<!-- Simulated Chart Visualization -->
+<div class="absolute inset-0 flex items-end justify-between px-2">
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[40%]"></div>
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[55%]"></div>
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[45%]"></div>
+<div class="w-10 bg-secondary rounded-t-lg h-[80%] relative">
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded shadow-lg">72%</div>
+</div>
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[65%]"></div>
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[50%]"></div>
+<div class="w-10 bg-secondary/20 rounded-t-lg h-[60%]"></div>
+</div>
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none">
+<div class="border-b border-outline-variant/20 w-full h-0"></div>
+<div class="border-b border-outline-variant/20 w-full h-0"></div>
+<div class="border-b border-outline-variant/20 w-full h-0"></div>
+<div class="border-b border-outline-variant/20 w-full h-0"></div>
+</div>
+</div>
+<div class="flex justify-between mt-4 text-[10px] font-bold text-on-surface-variant px-2">
+<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+</div>
+</section>
+<!-- Notification Hub / Recent Alerts -->
+<section class="md:col-span-4 bg-surface-container-lowest rounded-xl p-8 border-0 shadow-sm flex flex-col">
+<h3 class="text-xl font-headline font-extrabold mb-6">Recent Alerts</h3>
+<div class="flex-1 overflow-y-auto custom-scrollbar pr-2 space-y-4">
+<!-- Alert 1 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex gap-4 transition-all hover:bg-surface-container-high cursor-pointer">
+<div class="w-10 h-10 bg-primary-fixed rounded-full flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="schedule">schedule</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Next cycle scheduled</p>
+<p class="text-[11px] text-on-surface-variant leading-tight mt-1">Evening irrigation starting at 18:30 for Sector 7G.</p>
+<span class="text-[10px] text-primary font-bold mt-2 block">12 min ago</span>
+</div>
+</div>
+<!-- Alert 2 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex gap-4 transition-all hover:bg-surface-container-high cursor-pointer">
+<div class="w-10 h-10 bg-error-container rounded-full flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-error text-sm" data-icon="water_drop">water_drop</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Soil moisture low</p>
+<p class="text-[11px] text-on-surface-variant leading-tight mt-1">Critical drop detected in Plot B-14. Immediate check advised.</p>
+<span class="text-[10px] text-error font-bold mt-2 block">2 hours ago</span>
+</div>
+</div>
+<!-- Alert 3 -->
+<div class="bg-surface-container-low p-4 rounded-xl flex gap-4 transition-all hover:bg-surface-container-high cursor-pointer opacity-80">
+<div class="w-10 h-10 bg-secondary-fixed rounded-full flex-shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified">verified</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Monthly Report Ready</p>
+<p class="text-[11px] text-on-surface-variant leading-tight mt-1">Sustainability performance for October is now available.</p>
+<span class="text-[10px] text-on-surface-variant font-bold mt-2 block">Yesterday</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Call to Action Section (Asymmetric) -->
+<section class="mt-12 hero-gradient rounded-xl p-12 text-white relative overflow-hidden">
+<div class="relative z-10 md:w-2/3">
+<h2 class="text-4xl font-headline font-black mb-4 tracking-tight leading-none">Ready to expand your stewardship?</h2>
+<p class="text-lg text-on-primary-container font-body mb-8">Purchase new sensor nodes or upgrade your irrigation grid for automated precision farming.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-surface-container-lowest text-primary px-8 py-3 rounded-xl font-bold active:scale-95 transition-transform">Explore Products</button>
+<button class="text-on-primary-container px-8 py-3 rounded-xl font-bold border border-on-primary-container/30 hover:bg-white/10 transition-colors">Contact Support</button>
+</div>
+</div>
+<!-- Decorative Visual -->
+<div class="absolute right-0 top-0 bottom-0 w-1/3 hidden md:block">
+<img class="w-full h-full object-cover mix-blend-overlay" data-alt="lush tropical green leaves with morning dew droplets and soft morning sunlight filtering through the canopy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMhoqb0uheJFNSep9QHw7iB92ijiqD9rXBdn_RxQNI3VEflFMBkO0qvQVaXESut1VCQqtfU0CND8n9Tpv6RZ-N1yKFXDx-Q0fmOgttcXOCBYIKFg5Yp8lkfS-d4WynbCwdFvAZY1ymlu4gVq3rTtCpku9JIIsfAq9eQFhxYmhiZOj63A0uOS6dSMq72hryG4Sb2UcgE-iOD2Fx1cLNbOeijrcUebLH1NDYbrSOvd_wee95P-mfy5p9zDFY03WA0hQLxwg-nL5GfrAb"/>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-100 dark:bg-zinc-950 w-full mt-auto border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<span class="text-lg font-bold text-zinc-900 dark:text-zinc-100 font-['Manrope']">Verdrop</span>
+<p class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm leading-relaxed max-w-xs">© 2024 Verdrop. Technological Stewardship for a Greener Planet.</p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-emerald-600 dark:hover:text-emerald-400 underline underline-offset-4 transition-opacity" href="#">About Us</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-emerald-600 dark:hover:text-emerald-400 underline underline-offset-4 transition-opacity" href="#">Installation Guide</a>
+</div>
+<div class="flex flex-col gap-2">
+<a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-emerald-600 dark:hover:text-emerald-400 underline underline-offset-4 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-zinc-500 dark:text-zinc-400 font-['Inter'] text-sm hover:text-emerald-600 dark:hover:text-emerald-400 underline underline-offset-4 transition-opacity" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-sm font-bold text-emerald-700 dark:text-emerald-500">Contact Support</span>
+<p class="text-zinc-500 dark:text-zinc-400 text-sm">Need help with your grid? Our engineers are available 24/7 for environmental stewardship assistance.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-emerald-600" data-icon="mail">mail</span>
+<span class="material-symbols-outlined text-zinc-400 cursor-pointer hover:text-emerald-600" data-icon="help_center">help_center</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
