@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Verdrop | Technological Stewardship</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {tertiary: "#7b4d00", "on-tertiary-fixed-variant": "#653e00", "on-surface-variant": "#3f493f", "surface-container-low": "#eff4ff", background: "#f8f9ff", "surface-dim": "#ccdbf3", "inverse-primary": "#79db8d", "on-secondary-fixed-variant": "#00497e", "surface-container-lowest": "#ffffff", "surface-container-highest": "#d5e3fc", "primary-container": "#15803d", "tertiary-fixed-dim": "#ffb95f", "surface-container": "#e6eeff", "surface-tint": "#006d30", "surface-bright": "#f8f9ff", "inverse-surface": "#233144", "tertiary-fixed": "#ffddb8", "on-surface": "#0d1c2e", "inverse-on-surface": "#eaf1ff", "on-tertiary": "#ffffff", "error-container": "#ffdad6", "secondary-fixed-dim": "#9fcaff", "on-tertiary-fixed": "#2a1700", "on-background": "#0d1c2e", "tertiary-container": "#9c6300", "secondary-fixed": "#d2e4ff", "secondary-container": "#0397fd", "surface-variant": "#d5e3fc", "on-primary-fixed-variant": "#005323", "on-primary-fixed": "#00210a", "surface-container-high": "#dce9ff", "on-error-container": "#93000a", "primary-fixed-dim": "#79db8d", "on-secondary": "#ffffff", "on-primary": "#ffffff", error: "#ba1a1a", "primary-fixed": "#95f8a7", primary: "#00652c", "outline-variant": "#becabc", "on-error": "#ffffff", "on-primary-container": "#d3ffd5", outline: "#6f7a6e", "on-tertiary-container": "#fff2e7", secondary: "#0061a5", "on-secondary-container": "#002d52", "on-secondary-fixed": "#001c37", surface: "#f8f9ff"}, fontFamily: {headline: ["Manrope"], body: ["Inter"], label: ["Inter"], display: "Manrope"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}}}};</script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-border {
+            outline: 1px solid rgba(191, 202, 186, 0.2);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #206223 0%, #3a7b3a 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto z-50 rounded-2xl mt-4 mx-4 w-[calc(100%-2rem)] sticky top-4 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-[0px_12px_32px_rgba(25,28,28,0.04)] glass-border">
+<div class="text-2xl font-extrabold tracking-tighter text-green-800 dark:text-green-200 font-headline">
+            Verdrop
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-green-700 dark:text-green-400 font-bold border-b-2 border-green-600 pb-1 font-body transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="#">Dashboard</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="#">About Us</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="#">Subscription</a>
+<a class="text-zinc-600 dark:text-zinc-400 font-medium font-body hover:text-green-600 dark:hover:text-green-300 transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(32,98,35,0.3)]" href="#">Products</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant scale-95 active:scale-90 transition-transform">account_circle</button>
+<button class="hidden md:block px-6 py-2.5 rounded-xl primary-gradient text-white font-bold text-sm tracking-tight scale-95 active:scale-90 transition-transform shadow-lg">Get Started</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-24 pb-32 px-6 overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-xs font-bold uppercase tracking-widest mb-6">Technological Stewardship</span>
+<h1 class="font-headline text-6xl md:text-8xl font-extrabold tracking-tighter text-on-surface leading-[0.9] mb-8">
+                    Cultivating <br/><span class="text-primary italic">Intelligence</span> In Every Drop.
+                </h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed mb-10">
+                    Precision irrigation meets botanical mastery. Verdrop leverages neural soil analysis to automate your ecosystem's hydration with surgical accuracy.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="px-8 py-4 rounded-xl primary-gradient text-white font-bold text-lg shadow-xl hover:shadow-primary/20 transition-all">Deploy System</button>
+<button class="px-8 py-4 rounded-xl bg-surface-container-highest text-on-surface font-bold text-lg hover:bg-surface-container-high transition-all">View Calibration</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="aspect-square rounded-[2rem] overflow-hidden shadow-2xl glass-border relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Macro close-up of a high-tech sleek black irrigation sensor embedded in rich dark moist soil surrounded by vibrant green ferns and moss" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3aY0TYJslVdIgEkFu5jOSvGSYVO0ZvtPTptkmDTxcOXdk7Ga2scXkKTw70I9adZmQqL_ov2r2VSv25aYD64kuDSVB8VmyHAUmtPTsbycuYxUR4soQE4-TUvZq31UX1F9dd-PC0yV2QFYJyimzIg0eCt-QXI7sPF1DGQ2PpZyUDK9dc5br1Rf40EanK7Jg7wCJLCEIpWp01pF5AH5ve8o8FpLP8pNTTXP3P84y3ev9bEDIkMT56VLd3SgxbOfHGPDG5OysdYJv6kDH"/>
+<div class="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-md rounded-2xl glass-border border-white/20">
+<div class="flex justify-between items-center text-white">
+<div>
+<p class="text-[10px] uppercase tracking-widest font-bold opacity-70">Current Soil Health</p>
+<p class="text-2xl font-headline font-bold">98.4% Optimal</p>
+</div>
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">eco</span>
+</div>
+</div>
+</div>
+<!-- Asymmetrical decorative element -->
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</header>
+<!-- Our Mission (Bento Style) -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-4">The Verdrop Mandate</h2>
+<div class="w-24 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-surface-container-lowest p-10 rounded-3xl shadow-sm flex flex-col justify-between glass-border">
+<div class="max-w-md">
+<h3 class="font-headline text-3xl font-bold mb-4">Precision over Proliferation</h3>
+<p class="text-on-surface-variant leading-relaxed">Our mission is to reduce global agricultural water waste by 40% through adaptive sensing technologies that understand individual plant physiology in real-time.</p>
+</div>
+<div class="mt-8 flex gap-4">
+<div class="px-4 py-2 bg-secondary-container text-on-secondary-container rounded-xl text-sm font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">water_drop</span> 2.4B Gallons Saved
+                        </div>
+</div>
+</div>
+<div class="bg-primary text-white p-10 rounded-3xl shadow-xl relative overflow-hidden flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" data-alt="Minimalist top down view of a perfectly manicured sustainable vegetable garden with geometric layout and lush textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC71tDw4dzadL508n9xIyTEcxOGI6asUzhzAcBsicALP4rRDAinxMdK8NShFuESjfvVDKZA9wnlOXf6831MC9OhqHTa4C5kq6tzQeFrqdSH09F-bZ2wiTF8zjQsHhrk477T8DFn7yIaOUIAU9ge4la_KED5_d8VDIxoTJ2G3ut-kPB-d3v-Lub9wqpOa8yrIZGrCOVobv-6gHkUWU8l4paXIxwpZzbBL_DGbdDDriUtFNIsrrXEcoYh8shsTRQOto7SWOZ8u46wwt1q"/>
+<h3 class="font-headline text-2xl font-bold relative z-10 leading-tight">Zero Waste Architecture</h3>
+</div>
+<div class="bg-surface-container-highest p-10 rounded-3xl flex flex-col items-center justify-center text-center glass-border">
+<span class="material-symbols-outlined text-5xl mb-4 text-primary">biotech</span>
+<h3 class="font-headline text-xl font-bold mb-2">Living Lab R&amp;D</h3>
+<p class="text-sm text-on-surface-variant">Continuous iteration with over 15,000 botanical species mapped.</p>
+</div>
+<div class="md:col-span-2 relative h-64 rounded-3xl overflow-hidden group">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Wide panoramic shot of a modern sustainable indoor vertical farm with glowing purple and green LED lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB53UBDM2irQlTUDftFQAh6w0KyEOHTzy4tVKJ86iA3JZybgFL9UtpSvrrCWe4tzsyEEiQhgWizuIn0gZn5ZROxKQi51Utoq_6tnk3pxtYAnGGnxgxPeX9mU8dfm-0o_bHbFgHuSoXwtQDIPWTupoS98UYzHZRg5jsU9vi7w_E_tFIP93Ei_NtfSt7Wy3948FXEZTaAljwMQIEO9gCYrwWb7_azNI9g4jeXDuLrWccMqi4PZ0v5CKH-akoAJfBUo7WAd8z6NYYCGgos"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-10">
+<p class="text-white font-headline text-2xl font-bold">Scaling for the Future.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Deepen Your Knowledge (Educational) -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-[1.1]">Deepen Your Knowledge</h2>
+<p class="text-on-surface-variant text-lg">Understand the science behind the soil. Our latest research into mycological networks and hydration patterns.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-2 group">
+                    Explore Library <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 relative shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Detailed macro of morning dew on a vibrant green leaf with sunlight refracting through the water droplets" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBirhHr-p4lpcX-iXDwVWKvtRtUiaMnE5n7ZPxjQpVL0QOyHHyju3ZBax7qiS-diCCqlQrZHe0bSz0Uj-tdSRrZPfBt01KSu_-r1vZZdcccVjZyuUiAAzQa4I7nRrhgmqqIMm_T2Z4VDej0-HFixCzMq4JiS9WkgxSorVyQqTeneYLWNZgfZ4cIx1x7fdvsxIDLmsAhseq04PqVfcSiA6BaWP-dWXyMWpuBhEapxrnFhCFNHiOdF6LNWHXsrH9nO8hRWkakHPCQmvXA"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 text-primary text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm">Hydration Science</span>
+</div>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">The Transpiration Loop</h3>
+<p class="text-on-surface-variant line-clamp-2">How plants signal thirst through electrical impulses and how Verdrop deciphers them.</p>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 relative shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Close up of dark organic soil being held in hands, emphasizing texture and biological richness" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeag1U5Vh9jUOFI8SqTw2h3-MEWzom0vBTqsot0sRFXNnouuD3PYpWmU0ibn3eaoQjkEE_RAu_UV5kaUHzlmko_LMcOBujkn0AuRQcaifGV19qWtbYss-nyIC1ijmk0y2NxAR-uklAwPgj5mepkATjwk03VzCIbkIxYPwZPL98fkigrgMgi_WHDlIyOWVtvsMCd1BpLlfHpI5JUNC4ylm0zFVs2eT_DO55D0YF44OK2gmVwOVAiyV_W-EU4M_V1PqRQuWle02h0kLz"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 text-primary text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm">Microbiology</span>
+</div>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">Soil Microbiology 101</h3>
+<p class="text-on-surface-variant line-clamp-2">Protecting the fungal networks that sustain long-term crop fertility.</p>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden mb-6 relative shadow-lg">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern geometric sculpture in a park during sunset, representing the intersection of tech and nature" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcQ757Vng_539KogmIBsGzh4qqRZLzPFv2UXFPZn0nbHEOqTbjlOhBoJL0BZkOsuXVRxyqBLl_Ev7nEmgWHbGRxzt3ntTFouSygRXst5MIUEe37HYKnnst-Dt3WLNxFai8l2jXeqSiOJ0NCSMaBQoUWvJPaQcE5cAXtyegP5WOBv2INnA1bkfFJkkh_zIpBQhwgBQ-GumZB3G1f7SGy7bXnOcud3J4KGiV9wMu7yEXFlXeVWGySQHnpKIbh6hwfWIG3oE5wZWbakOR"/>
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-white/90 text-primary text-[10px] font-bold tracking-widest uppercase backdrop-blur-sm">Engineering</span>
+</div>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-3 group-hover:text-primary transition-colors">Flow-Sync Technology</h3>
+<p class="text-on-surface-variant line-clamp-2">An inside look at our proprietary valve-less moisture distribution system.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Hardware Ecosystem -->
+<section class="py-24 px-6 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative">
+<div class="absolute -left-24 -top-24 w-64 h-64 bg-secondary-container/20 rounded-full blur-[100px]"></div>
+<div class="grid grid-cols-2 gap-6 relative">
+<div class="space-y-6 pt-12">
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-lg glass-border transform hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">sensors</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Bio-Probe v3</h4>
+<p class="text-xs text-on-surface-variant">Hyper-sensitive moisture &amp; nitrogen capacitive scanner.</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-lg glass-border transform hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">hub</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Flow-Sync Hub</h4>
+<p class="text-xs text-on-surface-variant">The neural center for up to 50 active field probes.</p>
+</div>
+</div>
+<div class="space-y-6">
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-lg glass-border transform hover:-translate-y-2 transition-transform duration-500">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-2xl">settings_input_antenna</span>
+</div>
+<h4 class="font-headline font-bold text-lg mb-2">Omni-Link</h4>
+<p class="text-xs text-on-surface-variant">Long-range mesh networking for remote environments.</p>
+</div>
+<div class="aspect-square rounded-[2rem] overflow-hidden shadow-xl glass-border">
+<img class="w-full h-full object-cover" data-alt="Modern circuit board with elegant minimalist layout, soft lighting, and high tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzlZtus3blRjz1x7J9_jXVecI5tRCcbv5Hu3ZMiNt1yMhksrAM-fPVP-px-d0szvxbc7tWt8y8BqccVemNmSRF9oG-szRreoYLntawHM9knUzzNmcAwUqAaxKb4sgPD7uzcPK27MJSfjtIUqzpg0xQsspc8qhrVijFOG0MafGwS9RCCEutoWdv0emloAT4d7pqZP75ceSQ_ExQ2kpaVbo6Y4c0LfEV7qtCUBW_mMeCjCepG4Gfpn6s5BX-cbH5yT4HUt5_4kz7Lv8H"/>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline text-5xl md:text-6xl font-bold tracking-tight mb-8 leading-none">Hardware Ecosystem</h2>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10">
+                    Proprietary sensors crafted from recycled aerospace-grade materials, designed to vanish into your landscape while delivering clinical precision.
+                </p>
+<ul class="space-y-6 mb-12">
+<li class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<span class="font-bold block">10-Year Subterranean Life</span>
+<span class="text-sm text-on-surface-variant">Encapsulated in bio-polymer for extreme durability.</span>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="mt-1 w-6 h-6 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<span class="font-bold block">Low-Power Mesh</span>
+<span class="text-sm text-on-surface-variant">Operates for 24 months on a single solar charge.</span>
+</div>
+</li>
+</ul>
+<button class="px-10 py-5 rounded-2xl primary-gradient text-white font-bold text-lg shadow-2xl scale-95 active:scale-90 transition-all">Configure Your Hub</button>
+</div>
+</div>
+</section>
+<!-- Pricing (Choose Your Ecosystem) -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20">
+<h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight mb-4">Choose Your Ecosystem</h2>
+<p class="text-on-surface-variant text-lg">Scale your stewardship from a backyard oasis to global acreage.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Plan 1 -->
+<div class="p-10 rounded-[2.5rem] bg-surface-container-lowest shadow-sm glass-border flex flex-col justify-between hover:shadow-xl transition-shadow duration-500">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-2">Micro-Plot</h3>
+<p class="text-on-surface-variant text-sm mb-8">For home gardeners and hobbyists.</p>
+<div class="text-4xl font-headline font-bold mb-8">$19 <span class="text-sm text-on-surface-variant font-normal">/mo</span></div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> 5 Bio-Probe Support</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Mobile App Access</li>
+<li class="flex items-center gap-3 text-sm font-medium opacity-50"><span class="material-symbols-outlined text-xl">block</span> Satellite Imagery</li>
+</ul>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-highest font-bold hover:bg-surface-container-high transition-colors">Start Growing</button>
+</div>
+<!-- Plan 2 (Featured) -->
+<div class="p-10 rounded-[2.5rem] primary-gradient text-white shadow-2xl relative overflow-hidden flex flex-col justify-between transform scale-105 z-10">
+<div class="absolute top-0 right-0 p-4">
+<span class="bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-bold tracking-widest uppercase">Most Popular</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-2">Botanical Suite</h3>
+<p class="text-on-primary-container text-sm mb-8">For professional estates and landscapes.</p>
+<div class="text-4xl font-headline font-bold mb-8">$89 <span class="text-on-primary-container text-sm font-normal">/mo</span></div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-on-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span> 50 Bio-Probe Support</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-on-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span> Advanced Neural Mapping</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-on-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span> Multi-User Dashboard</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-on-primary-container text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span> API Integration</li>
+</ul>
+</div>
+<button class="w-full py-4 rounded-xl bg-white text-primary font-bold shadow-lg hover:shadow-white/20 transition-all">Select Suite</button>
+</div>
+<!-- Plan 3 -->
+<div class="p-10 rounded-[2.5rem] bg-surface-container-lowest shadow-sm glass-border flex flex-col justify-between hover:shadow-xl transition-shadow duration-500">
+<div>
+<h3 class="font-headline text-2xl font-bold mb-2">Terra Enterprise</h3>
+<p class="text-on-surface-variant text-sm mb-8">For industrial agriculture and conservation.</p>
+<div class="text-4xl font-headline font-bold mb-8">Custom</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Unlimited Nodes</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Dedicated Hardware Tech</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary text-xl">check_circle</span> Custom ML Models</li>
+</ul>
+</div>
+<button class="w-full py-4 rounded-xl bg-surface-container-highest font-bold hover:bg-surface-container-high transition-colors">Contact Engineering</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer CTA -->
+<footer class="pt-24 pb-12 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="relative rounded-[3rem] overflow-hidden primary-gradient p-12 md:p-24 text-center text-white">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-overlay" data-alt="Dreamy foggy forest at dawn with golden sunlight piercing through tall pine trees and soft morning mist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdVILrxyEqHd2lEBiXuU2f1DktOUyw9MX1J8SPbwgGTg9a-Yu94lOxEh4UAdRQtOdqeeJoWYJjV0GLviHZ0H5Oc-d5LTmJI9gjMgyTH7LeItXmHXl8oGXsPKs-oZEAfkalEf2endN6v4wmX9rTPliLpp8Er0MDG8N-oBuozcNXltmrp5E43qYNW6pzkmnquXze2Iy5P-0o82xpX1f3jfj0FoGpi3aKqnMTmJVl-wX_cfo40KptMTKYEl6n7c-7MINBkWwN2Wmf8qz_"/>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-8">Ready to evolve?</h2>
+<p class="text-xl md:text-2xl text-on-primary-container mb-12 opacity-90 leading-relaxed">Join the global movement of technological stewards. Start your calibration today.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="px-10 py-5 rounded-2xl bg-white text-primary font-bold text-xl shadow-2xl hover:scale-105 transition-transform">Get Started Now</button>
+<button class="px-10 py-5 rounded-2xl bg-white/10 backdrop-blur-md text-white border border-white/30 font-bold text-xl hover:bg-white/20 transition-all">Schedule Demo</button>
+</div>
+</div>
+</div>
+<div class="mt-24 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-12 border-t border-outline-variant/20 pt-12">
+<div class="col-span-2">
+<span class="font-headline font-extrabold text-3xl text-primary tracking-tighter mb-6 block">Verdrop</span>
+<p class="text-on-surface-variant text-sm leading-relaxed max-w-xs">Pioneering the intersection of botanical intelligence and precision hardware for a sustainable future.</p>
+</div>
+<div>
+<h5 class="font-bold mb-6">Systems</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Hardware</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Software</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6">Company</h5>
+<ul class="space-y-4 text-sm text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Our Mission</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Journal</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-1">
+<h5 class="font-bold mb-6">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined text-sm">filter_vintage</span></a>
+</div>
+</div>
+</div>
+<div class="mt-12 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-on-surface-variant/60">
+<p>© 2024 Verdrop Systems Inc. All rights preserved.</p>
+<div class="flex gap-8">
+<a class="hover:text-on-surface" href="#">Privacy Protocol</a>
+<a class="hover:text-on-surface" href="#">Terms of Stewardship</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Mobile Navigation Bar -->
+<div class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-zinc-900/80 backdrop-blur-xl shadow-2xl rounded-t-3xl">
+<a class="flex flex-col items-center justify-center bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-100 rounded-2xl px-5 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="text-[10px] font-semibold font-label">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="#">
+<span class="material-symbols-outlined">potted_plant</span>
+<span class="text-[10px] font-semibold font-label">Products</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span class="text-[10px] font-semibold font-label">Plans</span>
+</a>
+<a class="flex flex-col items-center justify-center text-zinc-500 dark:text-zinc-400 px-5 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-semibold font-label">Profile</span>
+</a>
+</div>
+</body></html>
